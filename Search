@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+void binary();
+int main() {
+    binary();
+    return 0;}
+void binary()
+{   
+	int a[10],mid,i,n,sind,eind;
+	int l=sizeof(a)/sizeof(int);
+	for(i=0;i<l;i++)
+	scanf("%d",&a[i]);
+	scanf("%d",&n); 
+	sind=0;
+	eind=l-1;
+	while(sind<=eind)
+	{
+		mid=(sind+eind)/2; 
+		if(a[mid]==n)
+		{
+			printf("\n%d!",mid);
+			break;
+		}
+		if(a[mid]>n)
+			eind=mid-1;
+		else
+			sind=mid+1;
+	}
+	
+}
